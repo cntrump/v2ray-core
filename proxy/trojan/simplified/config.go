@@ -17,6 +17,7 @@ func init() {
 				for _, v := range simplifiedServer.Users {
 					account := &trojan.Account{Password: v}
 					users = append(users, &protocol.User{
+						Level: 0,
 						Account: serial.ToTypedMessage(account),
 					})
 				}
